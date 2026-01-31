@@ -1,0 +1,12 @@
+[
+  {
+    "event_id": "e2001",
+    "event_type": "click",
+    "event_timestamp": "2026-01-30T09:35:11Z"
+  },
+  {
+    "event_id": "e2002",
+    "event_type": "view",
+    "event_timestamp": "2026-01-30T11:10:45Z"
+  }
+]

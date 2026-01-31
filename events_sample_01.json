@@ -1,0 +1,27 @@
+[
+  {
+    "event_id": "e1001",
+    "event_type": "click",
+    "event_timestamp": "2026-01-30T09:15:23Z"
+  },
+  {
+    "event_id": "e1002",
+    "event_type": "view",
+    "event_timestamp": "2026-01-30T09:45:10Z"
+  },
+  {
+    "event_id": "e1003",
+    "event_type": "click",
+    "event_timestamp": "2026-01-30T10:05:54Z"
+  },
+  {
+    "event_id": "e1004",
+    "event_type": "purchase",
+    "event_timestamp": "2026-01-30T10:25:31Z"
+  },
+  {
+    "event_id": "e1005",
+    "event_type": "view",
+    "event_timestamp": "2026-01-30T10:55:02Z"
+  }
+]

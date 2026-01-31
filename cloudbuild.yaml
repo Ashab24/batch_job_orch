@@ -1,0 +1,31 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'build',
+        '-t',
+        'us-central1-docker.pkg.dev/$PROJECT_ID/cloudrun-jobs-repo/gcs-batch-aggregator:$TAG_NAME',
+        '.'
+      ]
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      [
+        'push',
+        'us-central1-docker.pkg.dev/$PROJECT_ID/cloudrun-jobs-repo/gcs-batch-aggregator:$TAG_NAME'
+      ]
+
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      [
+        'run',
+        'jobs',
+        'update',
+        'gcs-batch-aggregator-job',
+        '--region=us-central1',
+        '--image=us-central1-docker.pkg.dev/$PROJECT_ID/cloudrun-jobs-repo/gcs-batch-aggregator:$TAG_NAME'
+      ]
+
+images:
+  - 'us-central1-docker.pkg.dev/$PROJECT_ID/cloudrun-jobs-repo/gcs-batch-aggregator:$TAG_NAME'
